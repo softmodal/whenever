@@ -9,6 +9,8 @@ module Whenever
       RAILS_ROOT 
     elsif defined?(::RAILS_ROOT)
       ::RAILS_ROOT
+    elsif defined?(Merb)
+      Merb.root if Merb.root
     end
   end
   
